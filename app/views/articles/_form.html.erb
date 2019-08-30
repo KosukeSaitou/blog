@@ -23,7 +23,12 @@
     <%= form.label :text %><br>
     <%= form.text_area :text %>
   </p>
- 
+
+  <p>
+ <%= from.label :画像 %><br />
+ <%= from.file_field :img, class: "image" %>
+  </p>
+
   <p>
     <%= form.submit %>
   </p>
