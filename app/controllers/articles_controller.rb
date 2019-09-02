@@ -44,11 +44,8 @@ end
 
 private
   def article_params
-    params.require(:article).permit(:title, :text, :img)
+    params.require(:article).permit(:title, :text, :img,:remove_img)
   end
 
-  def article_params
-  params.require(:article).permit(:title, :text, :img)
- end
 
 end

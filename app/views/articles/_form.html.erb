@@ -25,9 +25,13 @@
   </p>
 
   <p>
- <%= from.label :画像 %><br />
- <%= from.file_field :img, class: "image" %>
+ <%= form.label :画像 %><br />
+ <%= form.file_field :img, class: "image" %>
   </p>
+
+  <p>
+    <%= form.check_box :remove_img %>画像を削除する
+  </p> 
 
   <p>
     <%= form.submit %>
