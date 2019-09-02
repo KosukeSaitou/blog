@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <title>Blog</title>　
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,10 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
-</html>
+　　<div class="notice"> <!-- 追記 -->
+　　<%= yield :notice %> 
+　　</div>
+    
+ <%= yield %>
+
+ 
