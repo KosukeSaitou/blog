@@ -7,6 +7,7 @@ class ImgUploader < CarrierWave::Uploader::Base
   storage :file
   # storage :fog
 
+
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
@@ -44,3 +45,22 @@ class ImgUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+
+# 画像の上限を200pxにする
+   process :resize_to_limit => [200, 200]
+
+ # 保存形式をJPGにする
+  process :convert => 'jpg'
+
+
+ # 5MB以下
+def size_range
+    1..5.megabytes
+  end
+
+  # jpg,jpeg,gif,pngしか受け付けない
+def extension_white_list
+    %w(jpg jpeg gif png)
+  end
+
+end
